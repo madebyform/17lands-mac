@@ -15,7 +15,7 @@ uv sync
 Running using `uv`:
 
 ```
-uv mtga_follower.py
+uv run 17lands.py
 ```
 
 ## Notes
