@@ -18,6 +18,12 @@ Running using `uv`:
 uv run 17lands.py
 ```
 
+### Environment Variables
+
+The application supports the following environment variables:
+
+- `SEVENTEENLANDS_COLOR_LOGS`: Controls whether console logs use color formatting. Set to `false` to disable colors (default: `true`).
+
 ## Notes
 
 Licensed under GNU GPL v3.0 (see included LICENSE).
