@@ -1,7 +1,15 @@
+"""
+Client for interacting with the 17Lands API.
+
+This module provides a client for sending Magic: The Gathering gameplay data
+to the 17Lands API. It handles authentication, retries, and proper formatting
+of various types of data submissions.
+"""
+
 import datetime
 import gzip
 import json
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 import requests
 
