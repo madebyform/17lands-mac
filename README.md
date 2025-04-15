@@ -1,23 +1,22 @@
-# mtga-log-client
+# MTGA Log parser
 
 Simple client for passing relevant events from MTG Arena logs to the 17Lands REST endpoint.
 
-## Basic Usage
+## For developers
 
-On Windows, simply download and run `clickonce/setup.exe`. This version will have a console window that shows you everything that's being uploaded. You can kick this off before you start MTG Arena and have it run while you play. It can be configured to run at startup and will prompt you when updates are available.
+### Installing dependencies
 
-## Advanced Usage
-
-Requires [Python 3.6+](https://www.python.org/downloads/), along with the [`requests` package](http://docs.python-requests.org/en/master/).
-
-You can kick this off before you start MTG Arena and have it run in the background while you play. If you have Python installed, you can simply run the script directly. If you want to run through a terminal, the command would just be as follows:
-```
-python3 mtga_follower.py
+```bash
+uv sync
 ```
 
-Additional options are available by passing the `-h` flag to the program.
+### Running the log parser
 
-The log messages will show you what's being sent to the server. You can see more information about the data it's submitting here: http://www.17lands.com/ui/.
+Running using `uv`:
+
+```
+uv mtga_follower.py
+```
 
 ## Notes
 

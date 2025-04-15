@@ -1,0 +1,8 @@
+[project]
+name = "seventeenlands"
+version = "0.2.0"
+description = "Utility to upload MTG Arena data to 17Lands.com"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Robert Conroy", email = "support@17lands.com" }]
+dependencies = ["python-dateutil>=2.9.0.post0", "requests>=2.32.3"]
