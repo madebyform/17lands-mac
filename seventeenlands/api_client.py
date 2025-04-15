@@ -19,7 +19,9 @@ _ERROR_COOLDOWN = datetime.timedelta(minutes=2)
 class ApiClient:
     def __init__(self, host: str):
         self.host = host
-        self._last_error_posted_at = datetime.datetime.utcnow() - _ERROR_COOLDOWN
+        self._last_error_posted_at = (
+            datetime.datetime.now(datetime.timezone.utc) - _ERROR_COOLDOWN
+        )
 
     def _retry_post(self, endpoint: str, blob: Any, use_gzip=False):
         def _send_request() -> requests.Response:
@@ -168,7 +170,7 @@ class ApiClient:
         )
 
     def submit_error_info(self, blob: Dict):
-        now = datetime.datetime.utcnow()
+        now = datetime.datetime.now(datetime.timezone.utc)
         if self._last_error_posted_at > now - _ERROR_COOLDOWN:
             logger.warning(
                 f"Waiting to post another error; last message was sent too recently ({self._last_error_posted_at.isoformat()})"
